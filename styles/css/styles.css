@@ -695,12 +695,12 @@ button {
 }
 @media (min-width: 34.0625em) {
   .destination__bg {
-    background-image: url("../../../assets/destination/background-destination-tablet.jpg");
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 }
 @media (min-width: 59.625em) {
   .destination__bg {
-    background-image: url("../../../assets/destination/background-destination-desktop.jpg");
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
   }
 }
 .destination__bg2 {
@@ -710,12 +710,12 @@ button {
 }
 @media (min-width: 34.0625em) {
   .destination__bg2 {
-    background-image: url("../../../assets/destination/background-destination-tablet.jpg");
+    background-image: url("../../assets/destination/background-destination-tablet.jpg");
   }
 }
 @media (min-width: 59.625em) {
   .destination__bg2 {
-    background-image: url("../../../assets/destination/background-destination-desktop.jpg");
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
   }
 }
 
