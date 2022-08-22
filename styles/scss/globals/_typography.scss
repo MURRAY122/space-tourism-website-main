@@ -1,0 +1,146 @@
+@use "../utils" as u;
+:root {
+    --font-size-h1: 5rem; 
+    --font-size-h2: 3.5rem; 
+    --font-size-h3: 1.5rem;
+    --font-size-h4: 1rem;
+    --font-size-h5: 0.875rem;
+    --font-size-sub1: 1.75rem;
+    --font-size-sub2: 0.875rem;
+    --font-size-button: 1.25rem;
+    --font-size-nav: 1rem;
+    --font-size-para: 0.938rem;
+
+    @include u.breakpoint(medium) {
+        --font-size-h1: 9.375rem;
+        --font-size-h2: 5rem;
+        --font-size-h3: 2.5rem;
+        --font-size-h4: 1.5rem;
+        --font-size-h5: 1.25rem;
+        --font-size-button: 2rem;
+        --font-size-nav: 0.875rem;
+        --font-size-para: 1rem;
+    }
+    @include u.breakpoint(large) {
+        --font-size-h1: 9.375rem;
+        --font-size-h2: 6.25rem;
+        --font-size-h3: 3.5rem;
+        --font-size-h4: 2rem;
+        --font-size-h5: 1.75rem;
+        --font-size-nav: 1rem;
+        --font-size-para: 1.125rem;
+    
+    }
+}
+
+.heading__bellefair {
+    font-family: var(--family-bellefair);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.heading__barlow-con {
+    margin: 0;
+    padding: 0;
+    font-family: var(--family-barlow-con);
+    font-size: var(--font-size-h5);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 19.2px;
+    letter-spacing: 2.7px;
+    color: var(--white);
+    span{
+        padding-right: 16px;
+        color: hsla(0,0%,100%,0.25);
+    }
+
+    @include u.breakpoint(medium){
+        align-self: flex-start;
+        line-height: 24px;
+        letter-spacing: 3.375px;
+    }
+    @include u.breakpoint(large){
+        line-height: 34px;
+        letter-spacing: 4.725px;
+    }
+}
+
+.subheading-1{
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-sub1);
+    font-weight: 400;
+    font-family: var(--family-bellefair);
+    line-height: 32.09px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.subheading-2{
+    margin: 0;
+    padding: 0;
+    font-family: var(--family-barlow-con);
+    font-size: var(--font-size-sub2);
+    letter-spacing: 2.36px;
+    text-transform: uppercase;
+    color: var(--pale-blue);
+}
+
+p{
+    font-family: var(--family-barlow);
+    font-weight: 400;
+    font-size: var(--font-size-para);
+    line-height: 25px;
+    text-align: center;
+
+    @include u.breakpoint(medium){
+        line-height: 28px;
+    }
+    @include u.breakpoint(large){
+        line-height: 32px;
+        text-align: start;
+    }
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--family-barlow-con);
+    font-size: var(--font-size-nav);
+    font-weight: 400;
+    letter-spacing: 2.7px;
+
+    @include u.breakpoint(medium){
+        line-height: 17px;
+        letter-spacing: 2.3625px;
+    }
+
+    @include u.breakpoint(large){
+        line-height: 19px;
+        letter-spacing: 2.7px;
+    }
+}
+
+button{
+    text-transform: uppercase;
+    font-family: var(--family-bellefair);
+    font-weight: 400;
+    font-size: var(--font-size-button);
+    line-height: 23px;
+    letter-spacing: 1.25px;
+    text-align: center;
+}
+
+.button{
+    text-transform: uppercase;
+    font-family: var(--family-bellefair);
+    font-weight: 400;
+    font-size: var(--font-size-button);
+    line-height: 23px;
+    letter-spacing: 1.25px;
+    text-align: center;
+
+    @include u.breakpoint(medium){
+        line-height: 37px;
+        letter-spacing: 2px;
+    }
+}

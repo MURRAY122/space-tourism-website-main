@@ -1,0 +1,166 @@
+@use "../utils" as u;
+.destination{
+    &__content{
+        @include u.breakpoint(large){
+            gap: 1rem;
+            justify-content: space-around;
+            flex-direction: row;
+            padding-top: 24px;
+        }
+    }
+
+    &__layout{
+        @include u.breakpoint(large){
+            align-items: flex-start;
+            max-width: 445px;
+        }
+    }
+
+    &__img{
+        margin-top: 32px;
+        width: 170px;
+        height: auto;
+
+        @include u.breakpoint(medium){
+            width: 18.75rem;
+            margin-top: 3.75rem;
+        }
+
+        @include u.breakpoint(large){
+            width: 27.813rem;
+            margin-top: 4.563rem;
+        }
+    }
+
+    &__tabs{
+        margin-top: 26px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1.625rem;
+
+        @include u.breakpoint(medium){
+            margin-top: 3.313rem;
+            gap: 2.25rem;
+        }
+
+        @include u.breakpoint(large){
+            margin: 0;
+            gap: 2.188rem;
+        }
+    }
+
+    &__link{
+        height: 100%;
+        padding: 0 0 8px 0;
+        font-family: var(--family-barlow-con);
+        font-size: 14px;
+        background-color: transparent;
+        text-align: center;
+        color: var(--pale-blue);
+        cursor: pointer;
+
+        &:hover{
+            border-bottom: 3px solid hsla(0,0%,100%,.5);
+        }
+
+        &-active{
+            color: var(--white);
+            border-bottom: 3px solid var(--white);
+        }
+
+        @include u.breakpoint(medium){
+            font-size: 16px;
+            padding-bottom: 12px;
+        }
+    }
+
+    &__name{
+        margin: 0;
+        font-size: var(--font-size-h2);
+        padding: 20px 0 1px;
+
+        @include u.breakpoint(medium){
+            padding: 32px 0 8px;
+            line-height: 92px;
+        }
+
+        @include u.breakpoint(large){
+            padding: 37px 0 14px;
+            line-height: 115px;
+        }
+    }
+
+    &__desc{
+        margin: 0;
+        padding-bottom: 32px;
+        max-width: 327px;
+        border-bottom: 1px solid #383B4B;
+
+        @include u.breakpoint(medium){
+            padding-bottom: 49px;
+            line-height: 28px;
+            max-width: 573px;
+        }
+        @include u.breakpoint(large){
+            padding-bottom: 54px;
+            text-align: start;
+        }
+    }
+
+    &__details{
+        padding-top: 32px;
+        gap: 32px;
+
+        &-group{
+            gap: 12px;
+        }
+
+        @include u.breakpoint(medium){
+            flex-direction: row;
+            justify-content: center;
+        }
+        @include u.breakpoint(large){
+            padding-top: 28px;
+            gap: 79px;
+        }
+    }
+
+    &__bg-wrapper{
+        display: flex;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: -2;
+        animation: move 60s linear infinite;
+
+        @keyframes move {
+            0% {left: -100%; right: -0%;}
+            100% {left: 0%; right: -100%;}
+          }
+    }
+
+    &__bg{
+        width: 100%;
+        background-image: url('../../assets/destination/background-destination-mobile.jpg');
+
+        @include u.breakpoint(medium){
+            background-image: url('../../../assets/destination/background-destination-tablet.jpg');
+        }
+        @include u.breakpoint(large){
+            background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+        }
+    }
+    &__bg2{
+        width: 100%;
+        background-image: url('../../assets/destination/background-destination-mobile.jpg');
+        transform: rotateY(190deg);
+        @include u.breakpoint(medium){
+            background-image: url('../../../assets/destination/background-destination-tablet.jpg');
+        }
+        @include u.breakpoint(large){
+            background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+        }
+    }
+
+}

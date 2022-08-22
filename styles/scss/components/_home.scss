@@ -1,0 +1,102 @@
+@use "../utils" as u;
+.home{
+    text-align: center;
+    gap: 2.2rem;
+    padding: 1.475rem 24px;
+
+    @include u.breakpoint(medium){
+        padding-top: 106px;
+        padding: 6.625rem 24px;
+        gap: 7.563rem;
+    }
+
+    @include u.breakpoint(large){
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 251px 24px;
+    }
+    
+
+    &__content{
+        gap: 1rem;
+        max-width: 375px;
+
+        @include u.breakpoint(medium){
+            max-width: 450px;
+            gap: 1.5rem;
+        }
+        @include u.breakpoint(large){
+            align-items: flex-start;
+        }
+    }
+
+    &__title{
+        margin: 0;
+        font-size: var(--font-size-h1);
+        line-height: 100px;
+
+        @include u.breakpoint(medium){
+            line-height: 150px;
+        }
+    }
+
+    &__desc{
+        margin: 0;
+    }
+
+    &__outer-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 244px;
+        height: 244px;
+        background-color: transparent;
+        border-radius: 100%;
+        transition: background-color .5s;
+
+        &:hover{
+            background: hsla(0,0%,100%,0.1);
+        }
+
+        @include u.breakpoint(medium){
+            width: 342px;
+            height: 342px;
+        }
+
+        @include u.breakpoint(large){
+            align-self: flex-end;
+        }
+    }
+
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &:hover{
+            color: var(--dark-blue);
+        }
+
+        @include u.breakpoint(medium){
+            width: 242px;
+            height: 242px;
+        }
+    }
+
+    &__bg{
+        position: fixed;
+        background-image: url('../../assets/home/background-home-mobile.jpg');
+
+        @include u.breakpoint(medium){
+            background-image: url("../../assets/home/background-home-tablet.jpg");
+        }
+        @include u.breakpoint(large){
+            background-image: url("../../assets/home/background-home-desktop.jpg");
+        }
+    }
+}

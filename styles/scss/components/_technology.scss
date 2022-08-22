@@ -1,0 +1,193 @@
+@use "../utils" as u;
+
+.technology{
+    padding: 0;
+
+    @include u.breakpoint(medium){
+        padding: 40px 0px
+    }
+    @include u.breakpoint(large){
+        padding: 76px 0px
+    }
+
+    &__layout{
+        @include u.breakpoint(large){
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__content{
+        gap: 26px;
+        padding: 34px 24px;
+
+        @include u.breakpoint(medium){
+            padding-top: 56px;
+            gap: 44px;
+        }
+        @include u.breakpoint(large){
+            gap: 80px;
+            padding: 56px 130px 56px 165px;
+            width: 100%;
+            flex-direction: row;
+        }
+    }
+
+    &__tabs{
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+
+        @include u.breakpoint(large){
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &__tab{
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        color: var(--white);
+        border: 1px solid hsla(0,0%,100%,0.25);
+        border-radius: 100%;
+        font-family: var(--family-bellefair);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 1px;
+        cursor: pointer;
+
+        &:hover{
+            border-color: var(--white);
+        }
+
+        &-active{
+            color: var(--dark-blue);
+            background-color: var(--white);
+            opacity: 1;
+        }
+
+        @include u.breakpoint(medium){
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 1.5px;
+        }
+        @include u.breakpoint(large){
+            width: 80px;
+            height: 80px;
+            line-height: 37px;
+            letter-spacing: 2px;
+        }
+    }
+
+    &__details_group{
+        gap: 16px;
+
+        @include u.breakpoint(medium){
+            max-width: 458px;
+        }
+        @include u.breakpoint(large){
+            gap: 17px;
+            max-width: 470px;
+            align-items: flex-start;
+        }
+    }
+    &__name_group{
+        gap: 9px;
+
+        @include u.breakpoint(medium){
+            gap: 16px;
+        }
+        @include u.breakpoint(large){
+            gap: 11px;
+            align-items: flex-start;
+        }
+    }
+
+    &__name{
+        margin: 0;
+        font-size: var(--font-size-h3);
+        line-height: 28px;
+
+        @include u.breakpoint(medium){
+            line-height: 45px;
+        }
+        @include u.breakpoint(large){
+            line-height: 64px;
+        }
+    }
+    &__sub{
+        align-self: center;
+        line-height: 17px;
+        color: var(--pale-blue);
+
+        @include u.breakpoint(medium){
+            font-size: var(--font-size-para);
+            line-height: 19px;
+            letter-spacing: 2.7px;
+        }
+        @include u.breakpoint(large){
+            align-self: flex-start;
+            padding: 0;
+            line-height: 19px;
+            letter-spacing: 2.7px;
+        }
+    }
+
+    &__desc{
+        margin: 0;
+
+        @include u.breakpoint(large){
+            text-align: left;
+            padding-right: 26px;
+        }
+    }
+
+    &__img_container{
+        width: 100%;
+        height: 170px;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @include u.breakpoint(medium){
+            height: 310px;
+        }
+        @include u.breakpoint(large){
+            height: 527px;
+            max-width: 515px;
+        }
+    }
+
+    &__heading{
+        gap: 16px;
+        padding-bottom: 32px;
+
+        @include u.breakpoint(medium){
+            padding-left: 38px;
+            padding-bottom: 60px;
+        }
+        @include u.breakpoint(large){
+            padding: 0 0 26px 166.5px;
+        }
+    }
+
+
+    &__bg{
+        position: fixed;
+        background-image: url("../../assets/technology/background-technology-mobile.jpg");
+
+        @include u.breakpoint(medium){
+            background-image: url("../../assets/technology/background-technology-tablet.jpg");
+        }
+
+        @include u.breakpoint(large){
+            background-image: url("../../assets/technology/background-technology-desktop.jpg");
+        }
+
+    }
+}

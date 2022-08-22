@@ -1,0 +1,37 @@
+
+:root{
+    --dark-blue: hsl(230,35%,7%);
+    --pale-blue: hsl(231,77%,90%);
+    --white: hsl(0,0%,100%);
+}
+
+.heading__bellefair{
+    color: var(--white);
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+
+    &:active{
+        color: var(--white);
+        border-bottom: 3px solid var(--pale-blue);
+    }
+
+    &:hover{
+        color: var(--pale-blue);
+        border-bottom: 3px solid var(--pale-blue);
+    }
+}
+
+button{
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border: none;
+}
+
+.button{
+    background-color: var(--white);
+    color: var(--dark-blue);
+    border: none;
+}

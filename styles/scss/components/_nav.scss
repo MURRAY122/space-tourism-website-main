@@ -1,0 +1,149 @@
+@use "../utils" as u;
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+
+    @include u.breakpoint(medium){
+      padding: 0rem 0rem 0rem 2.438rem;
+    }
+
+    @include u.breakpoint(large){
+      padding: 2.5rem 0 0 3.438rem;
+    }
+
+    img{
+        width: 40px;
+        height: 100%;
+        @include u.breakpoint(medium){
+          width: 48px;
+        }
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: 2.188rem;
+        padding: 4rem 0 0 2rem;
+
+        @include u.breakpoint(medium){
+          padding: 39px 46px 0px 48px;
+          flex-direction: row;
+        }
+
+        @include u.breakpoint(large){
+          padding: 39px 165px 0px 123px;
+        }
+
+        a {
+            display: flex;
+            flex-direction: row;
+            gap: 0.625rem;
+            width: 100%;
+            height: 19px;
+            text-decoration: none;
+            transition: 0.3s;
+            text-transform: uppercase;
+            @include u.breakpoint(medium){
+              height: 100%;
+              justify-content: center;
+            }
+            span{
+                font-weight: 700;
+
+                @include u.breakpoint(medium){
+                  display: none;
+                }
+                @include u.breakpoint(large){
+                  display: block;
+                }
+
+            }
+
+            &:hover{
+                border-bottom: none;
+                border-right: 3px solid var(--pale-blue);
+                @include u.breakpoint(medium){
+                  border-right: 0;
+                  border-bottom: 3px solid var(--pale-blue);
+                }
+            }
+        
+
+        }
+        &-active{
+          border-bottom: none;
+          border-right: 3px solid var(--pale-blue);
+          @include u.breakpoint(medium){
+            border-right: 0;
+            border-bottom: 3px solid var(--pale-blue);
+          }
+        }
+    }
+}
+.navBar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(81.5485px);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+    a{
+      font-size: var(--font-size-nav);
+    }
+    @include u.breakpoint(medium){
+      position: relative;
+      width: 450px;
+      height: 96px;
+      padding: 0;
+    }
+
+    @include u.breakpoint(large){
+      position: relative;
+      width: 830px;
+      padding: 0;
+    }
+
+  }
+  .navBar .closebtn {
+    position: absolute;
+    top: 2.2rem;
+    right: 1.8rem;
+    width: 24px;
+    height: 21px;
+    img{
+        width: 24px;
+        height: 100%;
+    }
+    @include u.breakpoint(medium){
+      display: none;
+    }
+
+
+  }
+
+  .navOpenBtn {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: none;
+    img{
+        width: 24px;
+        height: 21px;
+    }
+
+    @include u.breakpoint(medium){
+      display: none;
+    }
+
+  }

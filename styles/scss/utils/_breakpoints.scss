@@ -1,0 +1,12 @@
+
+$breakpoint: (
+    "medium": "34.0625em", //Tablet
+    "large": "59.625em", // Desktop
+    "xlarge": "64em", // Large Desktop
+  );
+
+  @mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoint, $size)) {
+      @content;
+    }
+  }
