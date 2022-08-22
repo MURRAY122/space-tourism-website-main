@@ -145,10 +145,10 @@
         background-image: url('../../assets/destination/background-destination-mobile.jpg');
 
         @include u.breakpoint(medium){
-            background-image: url('../../../assets/destination/background-destination-tablet.jpg');
+            background-image: url('../../assets/destination/background-destination-tablet.jpg');
         }
         @include u.breakpoint(large){
-            background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+            background-image: url('../../assets/destination/background-destination-desktop.jpg');
         }
     }
     &__bg2{
@@ -156,10 +156,10 @@
         background-image: url('../../assets/destination/background-destination-mobile.jpg');
         transform: rotateY(190deg);
         @include u.breakpoint(medium){
-            background-image: url('../../../assets/destination/background-destination-tablet.jpg');
+            background-image: url('../../assets/destination/background-destination-tablet.jpg');
         }
         @include u.breakpoint(large){
-            background-image: url('../../../assets/destination/background-destination-desktop.jpg');
+            background-image: url('../../assets/destination/background-destination-desktop.jpg');
         }
     }
 
